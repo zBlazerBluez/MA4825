@@ -1,0 +1,8 @@
+prefix=/home/ryanlim95/catkin_ws/devel
+
+Name: dynamixel_workbench_msgs
+Description: Description of dynamixel_workbench_msgs
+Version: 1.0.0
+Cflags: -I/home/ryanlim95/catkin_ws/devel/include
+Libs: -L/home/ryanlim95/catkin_ws/devel/lib 
+Requires: std_msgs message_runtime

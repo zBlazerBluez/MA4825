@@ -1,0 +1,8 @@
+prefix=/home/ryanlim95/catkin_ws/devel
+
+Name: keyboard_reader
+Description: Description of keyboard_reader
+Version: 0.0.0
+Cflags: -I/home/ryanlim95/catkin_ws/devel/include
+Libs: -L/home/ryanlim95/catkin_ws/devel/lib 
+Requires: 
