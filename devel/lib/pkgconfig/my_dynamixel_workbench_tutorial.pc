@@ -1,8 +1,0 @@
-prefix=/home/ryanlim95/catkin_ws/devel
-
-Name: my_dynamixel_workbench_tutorial
-Description: Description of my_dynamixel_workbench_tutorial
-Version: 0.0.0
-Cflags: -I/home/ryanlim95/catkin_ws/src/dynamixel-workbench/my_dynamixel_workbench_tutorial/include
-Libs: -L/home/ryanlim95/catkin_ws/devel/lib 
-Requires: roscpp std_msgs message_runtime sensor_msgs dynamixel_workbench_msgs
