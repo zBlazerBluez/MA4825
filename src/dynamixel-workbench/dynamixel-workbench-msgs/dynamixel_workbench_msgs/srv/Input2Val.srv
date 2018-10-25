@@ -1,0 +1,8 @@
+# This message is used to convert radian and speed inputs to values
+
+uint8 id
+float32 radian
+float32 speed
+---
+uint32 radian_result
+uint32 speed_result
