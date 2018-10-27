@@ -26,7 +26,12 @@
     :reader speed
     :initarg :speed
     :type cl:float
-    :initform 0.0))
+    :initform 0.0)
+   (to_send_command
+    :reader to_send_command
+    :initarg :to_send_command
+    :type cl:boolean
+    :initform cl:nil))
 )
 
 (cl:defclass JointCommand-request (<JointCommand-request>)
@@ -56,6 +61,11 @@
 (cl:defmethod speed-val ((m <JointCommand-request>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader dynamixel_workbench_msgs-srv:speed-val is deprecated.  Use dynamixel_workbench_msgs-srv:speed instead.")
   (speed m))
+
+(cl:ensure-generic-function 'to_send_command-val :lambda-list '(m))
+(cl:defmethod to_send_command-val ((m <JointCommand-request>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader dynamixel_workbench_msgs-srv:to_send_command-val is deprecated.  Use dynamixel_workbench_msgs-srv:to_send_command instead.")
+  (to_send_command m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <JointCommand-request>) ostream)
   "Serializes a message object of type '<JointCommand-request>"
   (cl:let ((__ros_str_len (cl:length (cl:slot-value msg 'unit))))
@@ -75,6 +85,7 @@
     (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'to_send_command) 1 0)) ostream)
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <JointCommand-request>) istream)
   "Deserializes a message object of type '<JointCommand-request>"
@@ -99,6 +110,7 @@
       (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
     (cl:setf (cl:slot-value msg 'speed) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:setf (cl:slot-value msg 'to_send_command) (cl:not (cl:zerop (cl:read-byte istream))))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<JointCommand-request>)))
@@ -109,22 +121,23 @@
   "dynamixel_workbench_msgs/JointCommandRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<JointCommand-request>)))
   "Returns md5sum for a message object of type '<JointCommand-request>"
-  "6f30535bbb57aee41ebc5cbacab95fb8")
+  "c44c2be73cb184aa50f5f371652ee5a2")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'JointCommand-request)))
   "Returns md5sum for a message object of type 'JointCommand-request"
-  "6f30535bbb57aee41ebc5cbacab95fb8")
+  "c44c2be73cb184aa50f5f371652ee5a2")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<JointCommand-request>)))
   "Returns full string definition for message of type '<JointCommand-request>"
-  (cl:format cl:nil "~%~%string unit~%uint8 id~%float32 goal_position~%float32 speed~%~%~%"))
+  (cl:format cl:nil "~%~%string unit~%uint8 id~%float32 goal_position~%float32 speed~%bool to_send_command~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'JointCommand-request)))
   "Returns full string definition for message of type 'JointCommand-request"
-  (cl:format cl:nil "~%~%string unit~%uint8 id~%float32 goal_position~%float32 speed~%~%~%"))
+  (cl:format cl:nil "~%~%string unit~%uint8 id~%float32 goal_position~%float32 speed~%bool to_send_command~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <JointCommand-request>))
   (cl:+ 0
      4 (cl:length (cl:slot-value msg 'unit))
      1
      4
      4
+     1
 ))
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <JointCommand-request>))
   "Converts a ROS message object to a list"
@@ -133,6 +146,7 @@
     (cl:cons ':id (id msg))
     (cl:cons ':goal_position (goal_position msg))
     (cl:cons ':speed (speed msg))
+    (cl:cons ':to_send_command (to_send_command msg))
 ))
 ;//! \htmlinclude JointCommand-response.msg.html
 
@@ -185,10 +199,10 @@
   "dynamixel_workbench_msgs/JointCommandResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<JointCommand-response>)))
   "Returns md5sum for a message object of type '<JointCommand-response>"
-  "6f30535bbb57aee41ebc5cbacab95fb8")
+  "c44c2be73cb184aa50f5f371652ee5a2")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'JointCommand-response)))
   "Returns md5sum for a message object of type 'JointCommand-response"
-  "6f30535bbb57aee41ebc5cbacab95fb8")
+  "c44c2be73cb184aa50f5f371652ee5a2")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<JointCommand-response>)))
   "Returns full string definition for message of type '<JointCommand-response>"
   (cl:format cl:nil "bool position_result~%bool speed_result~%~%~%~%"))

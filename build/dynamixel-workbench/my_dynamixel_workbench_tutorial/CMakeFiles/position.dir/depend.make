@@ -15,6 +15,7 @@ dynamixel-workbench/my_dynamixel_workbench_tutorial/CMakeFiles/position.dir/src/
 dynamixel-workbench/my_dynamixel_workbench_tutorial/CMakeFiles/position.dir/src/position.cpp.o: /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/MX2.h
 dynamixel-workbench/my_dynamixel_workbench_tutorial/CMakeFiles/position.dir/src/position.cpp.o: /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/MX2Ext.h
 dynamixel-workbench/my_dynamixel_workbench_tutorial/CMakeFiles/position.dir/src/position.cpp.o: /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/MXExt.h
+dynamixel-workbench/my_dynamixel_workbench_tutorial/CMakeFiles/position.dir/src/position.cpp.o: /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/MovingCommand.h
 dynamixel-workbench/my_dynamixel_workbench_tutorial/CMakeFiles/position.dir/src/position.cpp.o: /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/PRO.h
 dynamixel-workbench/my_dynamixel_workbench_tutorial/CMakeFiles/position.dir/src/position.cpp.o: /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/PROExt.h
 dynamixel-workbench/my_dynamixel_workbench_tutorial/CMakeFiles/position.dir/src/position.cpp.o: /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/RX.h

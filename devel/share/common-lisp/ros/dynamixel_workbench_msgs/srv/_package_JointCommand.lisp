@@ -7,6 +7,8 @@
           GOAL_POSITION
           SPEED-VAL
           SPEED
+          TO_SEND_COMMAND-VAL
+          TO_SEND_COMMAND
           POSITION_RESULT-VAL
           POSITION_RESULT
           SPEED_RESULT-VAL

@@ -16,6 +16,7 @@ dynamixel-workbench/my_dynamixel_workbench_tutorial/CMakeFiles/position.dir/src/
  /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/MX2.h
  /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/MX2Ext.h
  /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/MXExt.h
+ /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/MovingCommand.h
  /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/PRO.h
  /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/PROExt.h
  /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/RX.h

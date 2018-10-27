@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "dynamixel_workbench_msgs: 18 messages, 5 services")
+message(STATUS "dynamixel_workbench_msgs: 19 messages, 5 services")
 
 set(MSG_I_FLAGS "-Idynamixel_workbench_msgs:/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
 
@@ -107,6 +107,11 @@ add_custom_target(_dynamixel_workbench_msgs_generate_messages_check_deps_${_file
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "dynamixel_workbench_msgs" "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/srv/WheelCommand.srv" ""
 )
 
+get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/MovingCommand.msg" NAME_WE)
+add_custom_target(_dynamixel_workbench_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "dynamixel_workbench_msgs" "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/MovingCommand.msg" ""
+)
+
 get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/MX.msg" NAME_WE)
 add_custom_target(_dynamixel_workbench_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "dynamixel_workbench_msgs" "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/MX.msg" ""
@@ -146,6 +151,12 @@ _generate_msg_cpp(dynamixel_workbench_msgs
 )
 _generate_msg_cpp(dynamixel_workbench_msgs
   "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/EX.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/dynamixel_workbench_msgs
+)
+_generate_msg_cpp(dynamixel_workbench_msgs
+  "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/MovingCommand.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/dynamixel_workbench_msgs
@@ -327,6 +338,8 @@ get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbe
 add_dependencies(dynamixel_workbench_msgs_generate_messages_cpp _dynamixel_workbench_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/srv/WheelCommand.srv" NAME_WE)
 add_dependencies(dynamixel_workbench_msgs_generate_messages_cpp _dynamixel_workbench_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/MovingCommand.msg" NAME_WE)
+add_dependencies(dynamixel_workbench_msgs_generate_messages_cpp _dynamixel_workbench_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/MX.msg" NAME_WE)
 add_dependencies(dynamixel_workbench_msgs_generate_messages_cpp _dynamixel_workbench_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/XH.msg" NAME_WE)
@@ -355,6 +368,12 @@ _generate_msg_eus(dynamixel_workbench_msgs
 )
 _generate_msg_eus(dynamixel_workbench_msgs
   "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/EX.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/dynamixel_workbench_msgs
+)
+_generate_msg_eus(dynamixel_workbench_msgs
+  "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/MovingCommand.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/dynamixel_workbench_msgs
@@ -536,6 +555,8 @@ get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbe
 add_dependencies(dynamixel_workbench_msgs_generate_messages_eus _dynamixel_workbench_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/srv/WheelCommand.srv" NAME_WE)
 add_dependencies(dynamixel_workbench_msgs_generate_messages_eus _dynamixel_workbench_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/MovingCommand.msg" NAME_WE)
+add_dependencies(dynamixel_workbench_msgs_generate_messages_eus _dynamixel_workbench_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/MX.msg" NAME_WE)
 add_dependencies(dynamixel_workbench_msgs_generate_messages_eus _dynamixel_workbench_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/XH.msg" NAME_WE)
@@ -564,6 +585,12 @@ _generate_msg_lisp(dynamixel_workbench_msgs
 )
 _generate_msg_lisp(dynamixel_workbench_msgs
   "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/EX.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/dynamixel_workbench_msgs
+)
+_generate_msg_lisp(dynamixel_workbench_msgs
+  "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/MovingCommand.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/dynamixel_workbench_msgs
@@ -745,6 +772,8 @@ get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbe
 add_dependencies(dynamixel_workbench_msgs_generate_messages_lisp _dynamixel_workbench_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/srv/WheelCommand.srv" NAME_WE)
 add_dependencies(dynamixel_workbench_msgs_generate_messages_lisp _dynamixel_workbench_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/MovingCommand.msg" NAME_WE)
+add_dependencies(dynamixel_workbench_msgs_generate_messages_lisp _dynamixel_workbench_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/MX.msg" NAME_WE)
 add_dependencies(dynamixel_workbench_msgs_generate_messages_lisp _dynamixel_workbench_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/XH.msg" NAME_WE)
@@ -773,6 +802,12 @@ _generate_msg_nodejs(dynamixel_workbench_msgs
 )
 _generate_msg_nodejs(dynamixel_workbench_msgs
   "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/EX.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/dynamixel_workbench_msgs
+)
+_generate_msg_nodejs(dynamixel_workbench_msgs
+  "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/MovingCommand.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/dynamixel_workbench_msgs
@@ -954,6 +989,8 @@ get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbe
 add_dependencies(dynamixel_workbench_msgs_generate_messages_nodejs _dynamixel_workbench_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/srv/WheelCommand.srv" NAME_WE)
 add_dependencies(dynamixel_workbench_msgs_generate_messages_nodejs _dynamixel_workbench_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/MovingCommand.msg" NAME_WE)
+add_dependencies(dynamixel_workbench_msgs_generate_messages_nodejs _dynamixel_workbench_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/MX.msg" NAME_WE)
 add_dependencies(dynamixel_workbench_msgs_generate_messages_nodejs _dynamixel_workbench_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/XH.msg" NAME_WE)
@@ -982,6 +1019,12 @@ _generate_msg_py(dynamixel_workbench_msgs
 )
 _generate_msg_py(dynamixel_workbench_msgs
   "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/EX.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/dynamixel_workbench_msgs
+)
+_generate_msg_py(dynamixel_workbench_msgs
+  "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/MovingCommand.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/dynamixel_workbench_msgs
@@ -1162,6 +1205,8 @@ add_dependencies(dynamixel_workbench_msgs_generate_messages_py _dynamixel_workbe
 get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/RX.msg" NAME_WE)
 add_dependencies(dynamixel_workbench_msgs_generate_messages_py _dynamixel_workbench_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/srv/WheelCommand.srv" NAME_WE)
+add_dependencies(dynamixel_workbench_msgs_generate_messages_py _dynamixel_workbench_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/MovingCommand.msg" NAME_WE)
 add_dependencies(dynamixel_workbench_msgs_generate_messages_py _dynamixel_workbench_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/MX.msg" NAME_WE)
 add_dependencies(dynamixel_workbench_msgs_generate_messages_py _dynamixel_workbench_msgs_generate_messages_check_deps_${_filename})

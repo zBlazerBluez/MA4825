@@ -27,13 +27,15 @@ struct JointCommandRequest_
     : unit()
     , id(0)
     , goal_position(0.0)
-    , speed(0.0)  {
+    , speed(0.0)
+    , to_send_command(false)  {
     }
   JointCommandRequest_(const ContainerAllocator& _alloc)
     : unit(_alloc)
     , id(0)
     , goal_position(0.0)
-    , speed(0.0)  {
+    , speed(0.0)
+    , to_send_command(false)  {
   (void)_alloc;
     }
 
@@ -50,6 +52,9 @@ struct JointCommandRequest_
 
    typedef float _speed_type;
   _speed_type speed;
+
+   typedef uint8_t _to_send_command_type;
+  _to_send_command_type to_send_command;
 
 
 
@@ -129,12 +134,12 @@ struct MD5Sum< ::dynamixel_workbench_msgs::JointCommandRequest_<ContainerAllocat
 {
   static const char* value()
   {
-    return "d58e70f485ec85f7768652111cb4a8ef";
+    return "eb2d04320ad15a39e4def0cfe3574db9";
   }
 
   static const char* value(const ::dynamixel_workbench_msgs::JointCommandRequest_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xd58e70f485ec85f7ULL;
-  static const uint64_t static_value2 = 0x768652111cb4a8efULL;
+  static const uint64_t static_value1 = 0xeb2d04320ad15a39ULL;
+  static const uint64_t static_value2 = 0xe4def0cfe3574db9ULL;
 };
 
 template<class ContainerAllocator>
@@ -159,6 +164,7 @@ string unit\n\
 uint8 id\n\
 float32 goal_position\n\
 float32 speed\n\
+bool to_send_command\n\
 ";
   }
 
@@ -181,6 +187,7 @@ namespace serialization
       stream.next(m.id);
       stream.next(m.goal_position);
       stream.next(m.speed);
+      stream.next(m.to_send_command);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -207,6 +214,8 @@ struct Printer< ::dynamixel_workbench_msgs::JointCommandRequest_<ContainerAlloca
     Printer<float>::stream(s, indent + "  ", v.goal_position);
     s << indent << "speed: ";
     Printer<float>::stream(s, indent + "  ", v.speed);
+    s << indent << "to_send_command: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.to_send_command);
   }
 };
 

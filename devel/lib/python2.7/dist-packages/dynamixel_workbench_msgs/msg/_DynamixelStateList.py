@@ -8,7 +8,7 @@ import struct
 import dynamixel_workbench_msgs.msg
 
 class DynamixelStateList(genpy.Message):
-  _md5sum = "f9cb4e8e7ba8cf1a564282cd1bb03548"
+  _md5sum = "eb2d04320ad15a39e4def0cfe3574db9"
   _type = "dynamixel_workbench_msgs/DynamixelStateList"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """# DynamixelState List

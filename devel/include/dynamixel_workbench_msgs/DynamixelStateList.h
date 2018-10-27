@@ -115,7 +115,7 @@ struct MD5Sum< ::dynamixel_workbench_msgs::DynamixelStateList_<ContainerAllocato
 {
   static const char* value()
   {
-    return "f9cb4e8e7ba8cf1a564282cd1bb03548";
+    return "eb2d04320ad15a39e4def0cfe3574db9";
   }
 
   static const char* value(const ::dynamixel_workbench_msgs::DynamixelStateList_<ContainerAllocator>&) { return value(); }

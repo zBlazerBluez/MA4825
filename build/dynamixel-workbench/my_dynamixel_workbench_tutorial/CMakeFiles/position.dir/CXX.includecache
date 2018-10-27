@@ -216,6 +216,22 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
+/home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/MovingCommand.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
 /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/PRO.h
 string
 -
@@ -443,6 +459,8 @@ dynamixel_workbench_msgs/DynamixelStateList.h
 -
 dynamixel_workbench_msgs/JointCommand.h
 -
+dynamixel_workbench_msgs/MovingCommand.h
+-
 dynamixel_workbench_msgs/Input2Val.h
 -
 
@@ -491,6 +509,8 @@ dynamixel_workbench_msgs/DynamixelStateList.h
 -
 dynamixel_workbench_msgs/Input2Val.h
 -
+dynamixel_workbench_msgs/MovingCommand.h
+-
 sensor_msgs/JointState.h
 /home/ryanlim95/catkin_ws/src/dynamixel-workbench/my_dynamixel_workbench_tutorial/include/my_dynamixel_workbench_tutorial/sensor_msgs/JointState.h
 std_msgs/String.h
@@ -519,6 +539,8 @@ sensor_msgs/JointState.h
 /home/ryanlim95/catkin_ws/src/dynamixel-workbench/my_dynamixel_workbench_tutorial/src/sensor_msgs/JointState.h
 std_msgs/String.h
 /home/ryanlim95/catkin_ws/src/dynamixel-workbench/my_dynamixel_workbench_tutorial/src/std_msgs/String.h
+dynamixel_workbench_msgs/MovingCommand.h
+-
 string
 -
 iostream

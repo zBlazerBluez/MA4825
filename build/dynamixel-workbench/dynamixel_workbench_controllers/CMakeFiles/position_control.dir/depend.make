@@ -15,6 +15,7 @@ dynamixel-workbench/dynamixel_workbench_controllers/CMakeFiles/position_control.
 dynamixel-workbench/dynamixel_workbench_controllers/CMakeFiles/position_control.dir/src/position_control.cpp.o: /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/MX2.h
 dynamixel-workbench/dynamixel_workbench_controllers/CMakeFiles/position_control.dir/src/position_control.cpp.o: /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/MX2Ext.h
 dynamixel-workbench/dynamixel_workbench_controllers/CMakeFiles/position_control.dir/src/position_control.cpp.o: /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/MXExt.h
+dynamixel-workbench/dynamixel_workbench_controllers/CMakeFiles/position_control.dir/src/position_control.cpp.o: /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/MovingCommand.h
 dynamixel-workbench/dynamixel_workbench_controllers/CMakeFiles/position_control.dir/src/position_control.cpp.o: /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/PRO.h
 dynamixel-workbench/dynamixel_workbench_controllers/CMakeFiles/position_control.dir/src/position_control.cpp.o: /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/PROExt.h
 dynamixel-workbench/dynamixel_workbench_controllers/CMakeFiles/position_control.dir/src/position_control.cpp.o: /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/RX.h

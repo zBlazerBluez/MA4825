@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/dynamixel_workbench_msgs_generate_messages_py"
   "/home/ryanlim95/catkin_ws/devel/lib/python2.7/dist-packages/dynamixel_workbench_msgs/msg/_PROExt.py"
   "/home/ryanlim95/catkin_ws/devel/lib/python2.7/dist-packages/dynamixel_workbench_msgs/msg/_EX.py"
+  "/home/ryanlim95/catkin_ws/devel/lib/python2.7/dist-packages/dynamixel_workbench_msgs/msg/_MovingCommand.py"
   "/home/ryanlim95/catkin_ws/devel/lib/python2.7/dist-packages/dynamixel_workbench_msgs/msg/_DynamixelInfo.py"
   "/home/ryanlim95/catkin_ws/devel/lib/python2.7/dist-packages/dynamixel_workbench_msgs/msg/_XL320.py"
   "/home/ryanlim95/catkin_ws/devel/lib/python2.7/dist-packages/dynamixel_workbench_msgs/msg/_XL.py"

@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::dynamixel_workbench_msgs::JointCommand > {
   static const char* value()
   {
-    return "6f30535bbb57aee41ebc5cbacab95fb8";
+    return "c44c2be73cb184aa50f5f371652ee5a2";
   }
 
   static const char* value(const ::dynamixel_workbench_msgs::JointCommand&) { return value(); }

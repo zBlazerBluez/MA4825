@@ -8,6 +8,8 @@ from ._MX import *
 from ._MX2 import *
 from ._MX2Ext import *
 from ._MXExt import *
+from ._MoveCommand import *
+from ._MovingCommand import *
 from ._PRO import *
 from ._PROExt import *
 from ._RX import *

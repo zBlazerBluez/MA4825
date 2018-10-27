@@ -71,7 +71,7 @@ class DynamixelStateList {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'f9cb4e8e7ba8cf1a564282cd1bb03548';
+    return 'eb2d04320ad15a39e4def0cfe3574db9';
   }
 
   static messageDefinition() {

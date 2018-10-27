@@ -25,6 +25,7 @@ class JointCommandRequest {
       this.id = null;
       this.goal_position = null;
       this.speed = null;
+      this.to_send_command = null;
     }
     else {
       if (initObj.hasOwnProperty('unit')) {
@@ -51,6 +52,12 @@ class JointCommandRequest {
       else {
         this.speed = 0.0;
       }
+      if (initObj.hasOwnProperty('to_send_command')) {
+        this.to_send_command = initObj.to_send_command
+      }
+      else {
+        this.to_send_command = false;
+      }
     }
   }
 
@@ -64,6 +71,8 @@ class JointCommandRequest {
     bufferOffset = _serializer.float32(obj.goal_position, buffer, bufferOffset);
     // Serialize message field [speed]
     bufferOffset = _serializer.float32(obj.speed, buffer, bufferOffset);
+    // Serialize message field [to_send_command]
+    bufferOffset = _serializer.bool(obj.to_send_command, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -79,13 +88,15 @@ class JointCommandRequest {
     data.goal_position = _deserializer.float32(buffer, bufferOffset);
     // Deserialize message field [speed]
     data.speed = _deserializer.float32(buffer, bufferOffset);
+    // Deserialize message field [to_send_command]
+    data.to_send_command = _deserializer.bool(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
     let length = 0;
     length += object.unit.length;
-    return length + 13;
+    return length + 14;
   }
 
   static datatype() {
@@ -95,7 +106,7 @@ class JointCommandRequest {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'd58e70f485ec85f7768652111cb4a8ef';
+    return 'eb2d04320ad15a39e4def0cfe3574db9';
   }
 
   static messageDefinition() {
@@ -107,6 +118,7 @@ class JointCommandRequest {
     uint8 id
     float32 goal_position
     float32 speed
+    bool to_send_command
     
     `;
   }
@@ -143,6 +155,13 @@ class JointCommandRequest {
     }
     else {
       resolved.speed = 0.0
+    }
+
+    if (msg.to_send_command !== undefined) {
+      resolved.to_send_command = msg.to_send_command;
+    }
+    else {
+      resolved.to_send_command = false
     }
 
     return resolved;
@@ -243,6 +262,6 @@ class JointCommandResponse {
 module.exports = {
   Request: JointCommandRequest,
   Response: JointCommandResponse,
-  md5sum() { return '6f30535bbb57aee41ebc5cbacab95fb8'; },
+  md5sum() { return 'c44c2be73cb184aa50f5f371652ee5a2'; },
   datatype() { return 'dynamixel_workbench_msgs/JointCommand'; }
 };

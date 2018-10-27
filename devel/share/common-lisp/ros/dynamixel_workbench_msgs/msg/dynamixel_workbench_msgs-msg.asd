@@ -24,6 +24,8 @@
     (:file "_package_MX2Ext" :depends-on ("_package"))
     (:file "MXExt" :depends-on ("_package_MXExt"))
     (:file "_package_MXExt" :depends-on ("_package"))
+    (:file "MovingCommand" :depends-on ("_package_MovingCommand"))
+    (:file "_package_MovingCommand" :depends-on ("_package"))
     (:file "PRO" :depends-on ("_package_PRO"))
     (:file "_package_PRO" :depends-on ("_package"))
     (:file "PROExt" :depends-on ("_package_PROExt"))

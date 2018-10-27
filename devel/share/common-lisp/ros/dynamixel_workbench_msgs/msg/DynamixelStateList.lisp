@@ -58,10 +58,10 @@
   "dynamixel_workbench_msgs/DynamixelStateList")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<DynamixelStateList>)))
   "Returns md5sum for a message object of type '<DynamixelStateList>"
-  "f9cb4e8e7ba8cf1a564282cd1bb03548")
+  "eb2d04320ad15a39e4def0cfe3574db9")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'DynamixelStateList)))
   "Returns md5sum for a message object of type 'DynamixelStateList"
-  "f9cb4e8e7ba8cf1a564282cd1bb03548")
+  "eb2d04320ad15a39e4def0cfe3574db9")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<DynamixelStateList>)))
   "Returns full string definition for message of type '<DynamixelStateList>"
   (cl:format cl:nil "# DynamixelState List~%~%DynamixelState[] dynamixel_state~%~%================================================================================~%MSG: dynamixel_workbench_msgs/DynamixelState~%# This message includes basic data of dynamixel~%~%string model_name~%uint8  id~%uint8  torque_enable~%~%int16  goal_current~%int32  goal_velocity~%int32 goal_position~%~%int16  present_current~%int32  present_velocity~%int32 present_position~%~%uint8 moving~%~%~%~%"))

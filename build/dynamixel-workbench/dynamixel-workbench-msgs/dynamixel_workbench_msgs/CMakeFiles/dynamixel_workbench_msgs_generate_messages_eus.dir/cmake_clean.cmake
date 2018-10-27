@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/dynamixel_workbench_msgs_generate_messages_eus"
   "/home/ryanlim95/catkin_ws/devel/share/roseus/ros/dynamixel_workbench_msgs/msg/PROExt.l"
   "/home/ryanlim95/catkin_ws/devel/share/roseus/ros/dynamixel_workbench_msgs/msg/EX.l"
+  "/home/ryanlim95/catkin_ws/devel/share/roseus/ros/dynamixel_workbench_msgs/msg/MovingCommand.l"
   "/home/ryanlim95/catkin_ws/devel/share/roseus/ros/dynamixel_workbench_msgs/msg/DynamixelInfo.l"
   "/home/ryanlim95/catkin_ws/devel/share/roseus/ros/dynamixel_workbench_msgs/msg/XL320.l"
   "/home/ryanlim95/catkin_ws/devel/share/roseus/ros/dynamixel_workbench_msgs/msg/XL.l"

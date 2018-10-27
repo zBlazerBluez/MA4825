@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/dynamixel_workbench_msgs_generate_messages_nodejs"
   "/home/ryanlim95/catkin_ws/devel/share/gennodejs/ros/dynamixel_workbench_msgs/msg/PROExt.js"
   "/home/ryanlim95/catkin_ws/devel/share/gennodejs/ros/dynamixel_workbench_msgs/msg/EX.js"
+  "/home/ryanlim95/catkin_ws/devel/share/gennodejs/ros/dynamixel_workbench_msgs/msg/MovingCommand.js"
   "/home/ryanlim95/catkin_ws/devel/share/gennodejs/ros/dynamixel_workbench_msgs/msg/DynamixelInfo.js"
   "/home/ryanlim95/catkin_ws/devel/share/gennodejs/ros/dynamixel_workbench_msgs/msg/XL320.js"
   "/home/ryanlim95/catkin_ws/devel/share/gennodejs/ros/dynamixel_workbench_msgs/msg/XL.js"

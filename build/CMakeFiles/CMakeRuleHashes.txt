@@ -13,6 +13,8 @@ a46b1309af6dadfc7dbd9cfc1a4fe2b2 /home/ryanlim95/catkin_ws/devel/include/dynamix
 12c0c8c8e4328c8e1d7833d2346ed455 /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/MX2.h
 52eccc2fa0f419ed91adc82308c02a39 /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/MX2Ext.h
 ae91ca55c4586a4d1eb52358a618d23d /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/MXExt.h
+990ccd2a09ef897d16a82f34437779d8 /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/MoveCommand.h
+ccb632e439b49e89130a4a6415c8dab0 /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/MovingCommand.h
 4a9e36fb0d9009a57169ca893a5a7706 /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/PRO.h
 9a56759454f09209531ab7a0a3786652 /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/PROExt.h
 44d166b3962701c1115432d202157bc2 /home/ryanlim95/catkin_ws/devel/include/dynamixel_workbench_msgs/RX.h
@@ -34,6 +36,8 @@ f59b58de3e8c591ce995a3a6adfb98a6 /home/ryanlim95/catkin_ws/devel/lib/python2.7/d
 52cdcc1a7dfb0ba54abf887655408441 /home/ryanlim95/catkin_ws/devel/lib/python2.7/dist-packages/dynamixel_workbench_msgs/msg/_MX2.py
 dcdf24b1233c87bec4caf26df14e4f5d /home/ryanlim95/catkin_ws/devel/lib/python2.7/dist-packages/dynamixel_workbench_msgs/msg/_MX2Ext.py
 7cfe9df2551f81a8fc5c06af91c428e1 /home/ryanlim95/catkin_ws/devel/lib/python2.7/dist-packages/dynamixel_workbench_msgs/msg/_MXExt.py
+22cc9bfcc276979f1f26c79cf4e296aa /home/ryanlim95/catkin_ws/devel/lib/python2.7/dist-packages/dynamixel_workbench_msgs/msg/_MoveCommand.py
+f872375b3dde7577e1d9a4e3a473026f /home/ryanlim95/catkin_ws/devel/lib/python2.7/dist-packages/dynamixel_workbench_msgs/msg/_MovingCommand.py
 354f0eb1981f11db9111f42070a7b690 /home/ryanlim95/catkin_ws/devel/lib/python2.7/dist-packages/dynamixel_workbench_msgs/msg/_PRO.py
 cc8f712823ff45cc25ed1baebe6b0221 /home/ryanlim95/catkin_ws/devel/lib/python2.7/dist-packages/dynamixel_workbench_msgs/msg/_PROExt.py
 a1d22897ce7c603ee3d3d0753caf0c79 /home/ryanlim95/catkin_ws/devel/lib/python2.7/dist-packages/dynamixel_workbench_msgs/msg/_RX.py
@@ -61,6 +65,8 @@ e97e61a890540998c31f5f0657dae704 /home/ryanlim95/catkin_ws/devel/share/common-li
 90845c5767106c3d04b9fa929bc0fc46 /home/ryanlim95/catkin_ws/devel/share/common-lisp/ros/dynamixel_workbench_msgs/msg/MX2.lisp
 71de20f869fc7abdd08f613cdc5fb745 /home/ryanlim95/catkin_ws/devel/share/common-lisp/ros/dynamixel_workbench_msgs/msg/MX2Ext.lisp
 72d23a2c5b497a76bf1cf0e59715ad26 /home/ryanlim95/catkin_ws/devel/share/common-lisp/ros/dynamixel_workbench_msgs/msg/MXExt.lisp
+c5a3cdda09a859031a698540cf92e15f /home/ryanlim95/catkin_ws/devel/share/common-lisp/ros/dynamixel_workbench_msgs/msg/MoveCommand.lisp
+42b17b69a50d1eba6982f7f86b9b9cb3 /home/ryanlim95/catkin_ws/devel/share/common-lisp/ros/dynamixel_workbench_msgs/msg/MovingCommand.lisp
 1567aebccf3148ecb937749357d3a40f /home/ryanlim95/catkin_ws/devel/share/common-lisp/ros/dynamixel_workbench_msgs/msg/PRO.lisp
 07c470fbd8fe83ad982a82a59cdd34b1 /home/ryanlim95/catkin_ws/devel/share/common-lisp/ros/dynamixel_workbench_msgs/msg/PROExt.lisp
 9cb5422e1c8b06ca9a4f000f4e9aac13 /home/ryanlim95/catkin_ws/devel/share/common-lisp/ros/dynamixel_workbench_msgs/msg/RX.lisp
@@ -85,6 +91,8 @@ fa81a54cb4a3afeb4e119c3e0b3f1b38 /home/ryanlim95/catkin_ws/devel/share/gennodejs
 004474bc716627c21041346ec23ed200 /home/ryanlim95/catkin_ws/devel/share/gennodejs/ros/dynamixel_workbench_msgs/msg/MX2.js
 082618c5dc4cb417b59605b1a914a1e1 /home/ryanlim95/catkin_ws/devel/share/gennodejs/ros/dynamixel_workbench_msgs/msg/MX2Ext.js
 42ca01c4c8bea04e5911e11e46bc5d1e /home/ryanlim95/catkin_ws/devel/share/gennodejs/ros/dynamixel_workbench_msgs/msg/MXExt.js
+3806a776d3939b539182eadacea440fe /home/ryanlim95/catkin_ws/devel/share/gennodejs/ros/dynamixel_workbench_msgs/msg/MoveCommand.js
+6d0f4be2548d1b9446c7254baccdec5a /home/ryanlim95/catkin_ws/devel/share/gennodejs/ros/dynamixel_workbench_msgs/msg/MovingCommand.js
 fc0a6b2fc4eb9c4afd1740b592522537 /home/ryanlim95/catkin_ws/devel/share/gennodejs/ros/dynamixel_workbench_msgs/msg/PRO.js
 f2e2fdf2382f35940a5009e59a2b56f3 /home/ryanlim95/catkin_ws/devel/share/gennodejs/ros/dynamixel_workbench_msgs/msg/PROExt.js
 6504e38fc4fa1f19224dbb585ff7dded /home/ryanlim95/catkin_ws/devel/share/gennodejs/ros/dynamixel_workbench_msgs/msg/RX.js
@@ -110,6 +118,8 @@ cfd83c9b6a49c0391c013731335066c2 /home/ryanlim95/catkin_ws/devel/share/roseus/ro
 cf38147b942eda7931d75fb2c700c9dd /home/ryanlim95/catkin_ws/devel/share/roseus/ros/dynamixel_workbench_msgs/msg/MX2.l
 daac332e7905e4d6e42d46c5aca4ade3 /home/ryanlim95/catkin_ws/devel/share/roseus/ros/dynamixel_workbench_msgs/msg/MX2Ext.l
 15d55a423127a11e3253b390bfccbe52 /home/ryanlim95/catkin_ws/devel/share/roseus/ros/dynamixel_workbench_msgs/msg/MXExt.l
+807f12b165f74bc8841715975f31ace1 /home/ryanlim95/catkin_ws/devel/share/roseus/ros/dynamixel_workbench_msgs/msg/MoveCommand.l
+411284bf3c40af63725a00e2b69491bc /home/ryanlim95/catkin_ws/devel/share/roseus/ros/dynamixel_workbench_msgs/msg/MovingCommand.l
 731acfe83ba43cbc2ddf1371a5c6961f /home/ryanlim95/catkin_ws/devel/share/roseus/ros/dynamixel_workbench_msgs/msg/PRO.l
 623df37ee0231ee5105c185a94eff950 /home/ryanlim95/catkin_ws/devel/share/roseus/ros/dynamixel_workbench_msgs/msg/PROExt.l
 1cd28c1c824a797665ab94664afe4f34 /home/ryanlim95/catkin_ws/devel/share/roseus/ros/dynamixel_workbench_msgs/msg/RX.l
@@ -140,6 +150,7 @@ c30fefc88bab2ee9826acbda06be3865 dynamixel-workbench/dynamixel-workbench-msgs/dy
 02332deefbc3a3daf5c7902d9415b24a dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/CMakeFiles/_dynamixel_workbench_msgs_generate_messages_check_deps_MX2
 62af3caa5478f6b6da2196ea87c84eed dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/CMakeFiles/_dynamixel_workbench_msgs_generate_messages_check_deps_MX2Ext
 d3a1f138aaf02de01424223233930d13 dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/CMakeFiles/_dynamixel_workbench_msgs_generate_messages_check_deps_MXExt
+1a37b6ab2201d475c5e467412d8e2b85 dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/CMakeFiles/_dynamixel_workbench_msgs_generate_messages_check_deps_MovingCommand
 38b9b8fd73d5ef8382f178f145fe1a4d dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/CMakeFiles/_dynamixel_workbench_msgs_generate_messages_check_deps_PRO
 69c81a1b50170347a35120253b71b789 dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/CMakeFiles/_dynamixel_workbench_msgs_generate_messages_check_deps_PROExt
 4fc884e53741ee5b1ac0e7ed11228f1e dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/CMakeFiles/_dynamixel_workbench_msgs_generate_messages_check_deps_RX

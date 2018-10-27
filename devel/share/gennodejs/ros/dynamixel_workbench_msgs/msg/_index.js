@@ -9,6 +9,7 @@ let EX = require('./EX.js');
 let XMExt = require('./XMExt.js');
 let PROExt = require('./PROExt.js');
 let XL320 = require('./XL320.js');
+let MovingCommand = require('./MovingCommand.js');
 let MX = require('./MX.js');
 let DynamixelLoadInfo = require('./DynamixelLoadInfo.js');
 let XH = require('./XH.js');
@@ -29,6 +30,7 @@ module.exports = {
   XMExt: XMExt,
   PROExt: PROExt,
   XL320: XL320,
+  MovingCommand: MovingCommand,
   MX: MX,
   DynamixelLoadInfo: DynamixelLoadInfo,
   XH: XH,

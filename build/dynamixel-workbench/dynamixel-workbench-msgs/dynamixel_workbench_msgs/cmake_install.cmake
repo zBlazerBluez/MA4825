@@ -52,6 +52,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/DynamixelStateList.msg"
     "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/DynamixelInfo.msg"
     "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/DynamixelLoadInfo.msg"
+    "/home/ryanlim95/catkin_ws/src/dynamixel-workbench/dynamixel-workbench-msgs/dynamixel_workbench_msgs/msg/MovingCommand.msg"
     )
 endif()
 

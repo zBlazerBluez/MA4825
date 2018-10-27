@@ -20,7 +20,7 @@
 
 (defclass dynamixel_workbench_msgs::JointCommandRequest
   :super ros::object
-  :slots (_unit _id _goal_position _speed ))
+  :slots (_unit _id _goal_position _speed _to_send_command ))
 
 (defmethod dynamixel_workbench_msgs::JointCommandRequest
   (:init
@@ -29,12 +29,14 @@
     ((:id __id) 0)
     ((:goal_position __goal_position) 0.0)
     ((:speed __speed) 0.0)
+    ((:to_send_command __to_send_command) nil)
     )
    (send-super :init)
    (setq _unit (string __unit))
    (setq _id (round __id))
    (setq _goal_position (float __goal_position))
    (setq _speed (float __speed))
+   (setq _to_send_command __to_send_command)
    self)
   (:unit
    (&optional __unit)
@@ -48,6 +50,9 @@
   (:speed
    (&optional __speed)
    (if __speed (setq _speed __speed)) _speed)
+  (:to_send_command
+   (&optional __to_send_command)
+   (if __to_send_command (setq _to_send_command __to_send_command)) _to_send_command)
   (:serialization-length
    ()
    (+
@@ -59,6 +64,8 @@
     4
     ;; float32 _speed
     4
+    ;; bool _to_send_command
+    1
     ))
   (:serialize
    (&optional strm)
@@ -72,6 +79,8 @@
        (sys::poke _goal_position (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
      ;; float32 _speed
        (sys::poke _speed (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
+     ;; bool _to_send_command
+       (if _to_send_command (write-byte -1 s) (write-byte 0 s))
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
@@ -84,6 +93,8 @@
      (setq _goal_position (sys::peek buf ptr- :float)) (incf ptr- 4)
    ;; float32 _speed
      (setq _speed (sys::peek buf ptr- :float)) (incf ptr- 4)
+   ;; bool _to_send_command
+     (setq _to_send_command (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
    ;;
    self)
   )
@@ -140,7 +151,7 @@
   :super ros::object
   :slots ())
 
-(setf (get dynamixel_workbench_msgs::JointCommand :md5sum-) "6f30535bbb57aee41ebc5cbacab95fb8")
+(setf (get dynamixel_workbench_msgs::JointCommand :md5sum-) "c44c2be73cb184aa50f5f371652ee5a2")
 (setf (get dynamixel_workbench_msgs::JointCommand :datatype-) "dynamixel_workbench_msgs/JointCommand")
 (setf (get dynamixel_workbench_msgs::JointCommand :request) dynamixel_workbench_msgs::JointCommandRequest)
 (setf (get dynamixel_workbench_msgs::JointCommand :response) dynamixel_workbench_msgs::JointCommandResponse)
@@ -148,7 +159,7 @@
 (defmethod dynamixel_workbench_msgs::JointCommandRequest
   (:response () (instance dynamixel_workbench_msgs::JointCommandResponse :init)))
 
-(setf (get dynamixel_workbench_msgs::JointCommandRequest :md5sum-) "6f30535bbb57aee41ebc5cbacab95fb8")
+(setf (get dynamixel_workbench_msgs::JointCommandRequest :md5sum-) "c44c2be73cb184aa50f5f371652ee5a2")
 (setf (get dynamixel_workbench_msgs::JointCommandRequest :datatype-) "dynamixel_workbench_msgs/JointCommandRequest")
 (setf (get dynamixel_workbench_msgs::JointCommandRequest :definition-)
       "
@@ -157,13 +168,14 @@ string unit
 uint8 id
 float32 goal_position
 float32 speed
+bool to_send_command
 ---
 bool position_result
 bool speed_result
 
 ")
 
-(setf (get dynamixel_workbench_msgs::JointCommandResponse :md5sum-) "6f30535bbb57aee41ebc5cbacab95fb8")
+(setf (get dynamixel_workbench_msgs::JointCommandResponse :md5sum-) "c44c2be73cb184aa50f5f371652ee5a2")
 (setf (get dynamixel_workbench_msgs::JointCommandResponse :datatype-) "dynamixel_workbench_msgs/JointCommandResponse")
 (setf (get dynamixel_workbench_msgs::JointCommandResponse :definition-)
       "
@@ -172,6 +184,7 @@ string unit
 uint8 id
 float32 goal_position
 float32 speed
+bool to_send_command
 ---
 bool position_result
 bool speed_result
@@ -180,6 +193,6 @@ bool speed_result
 
 
 
-(provide :dynamixel_workbench_msgs/JointCommand "6f30535bbb57aee41ebc5cbacab95fb8")
+(provide :dynamixel_workbench_msgs/JointCommand "c44c2be73cb184aa50f5f371652ee5a2")
 
 

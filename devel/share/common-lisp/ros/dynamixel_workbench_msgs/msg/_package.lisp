@@ -21,6 +21,8 @@
    "MX2EXT"
    "<MXEXT>"
    "MXEXT"
+   "<MOVINGCOMMAND>"
+   "MOVINGCOMMAND"
    "<PRO>"
    "PRO"
    "<PROEXT>"
