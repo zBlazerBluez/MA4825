@@ -43,7 +43,7 @@ class Position
 
 
 	public:
-	int joint_value[5];
+	int joint_value[6];
 	Position();
 	void stateCB(const dynamixel_workbench_msgs::DynamixelStateList& msg);
 	// void keyupCB(const keyboard::Key& msg);

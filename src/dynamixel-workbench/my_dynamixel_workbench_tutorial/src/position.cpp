@@ -19,16 +19,17 @@ Position::Position(){
     // Initialize ROS Publisher
 
     // Initialize ROS Subscriber
-    sub_dynamixel_state = n.subscribe("dynamixel_state", 1000, &Position::stateCB, this);
+    // sub_dynamixel_state = n.subscribe("dynamixel_state", 1000, &Position::stateCB, this);
     // sub_keyup = n.subscribe("/keyboard/keyup", 1000, &Position::keyupCB, this);
     sub_keydown = n.subscribe("/keyboard/keydown", 1000, &Position::keydownCB, this);
 
     // Initialize ROS Service Client
     input_2_val_client = n.serviceClient<dynamixel_workbench_msgs::Input2Val>("input_2_val");
     joint_command_client = n.serviceClient<dynamixel_workbench_msgs::JointCommand>("joint_command");
-    for (int i = 0; i < 5; i++){
+    for (int i = 0; i < 6; i++){
         joint_value[i] = 500;
     }
+    sleep(1);
     cout << "At constructor" << endl;
 }
 
@@ -45,8 +46,10 @@ void Position::stateCB(const dynamixel_workbench_msgs::DynamixelStateList& msg){
 void Position::keydownCB(const keyboard::Key& msg){
     int code = (int)msg.code;
     int modifiers = (int)msg.modifiers;
-    int id = 1;
-    int change = 5;
+    int id = 0;
+    int change = 1;
+    int speed = 50;
+    cout << "Received a key\n";
     switch (code){
         case 113:
             id = 1;
@@ -68,45 +71,50 @@ void Position::keydownCB(const keyboard::Key& msg){
             break;
         case 97:
             id = 1;
-            change = -5;
+            change = -1;
             break;
         case 115:
             id = 2;
-            change = -5;
+            change = -1;
             break;
         case 100:
             id = 3;
-            change = -5;
+            change = -1;
             break;
         case 106:
             id = 4;
-            change = -5;
+            change = -1;
             break;
         case 107:
             id = 5;
-            change = -5;
+            change = -1;
             break;
         case 108:
             id = 6;
-            change = -5;
+            change = -1;
             break;
         default:
             return;
     }
-    joint_value[id - 1] += change; // check for code to +5 or -5 and set id
-    moveDynamixelCommand(id, joint_value[id - 1], 200);
+    joint_value[id] += speed*change;
+    if (joint_value[id] > 750 or joint_value[id] < 250){
+        joint_value[id] -= speed*change;
+    }
+    cout << "Moving to " << id << " " << joint_value[id] << "\n";
+    moveDynamixelCommand(id, joint_value[id], 800);
 }
 
 void Position::Home(){
     // Home position
-    // for (int i = 0; i < 5; i++){
-    //     moveDynamixelCommand(i, joint_value[i - 1], 200.0);
-    // }
-    moveDynamixelCommand(1, 0.0, 200.0);
+    for (int i = 0; i < 6; i++){
+        moveDynamixelCommand(i + 1, joint_value[i], 800.0);
+        usleep(600000);
+    }
+    // moveDynamixelCommand(1, 0.0, 200.0);
 }
 
 void Position::moveDynamixelCommand(int id, float deg, float speed){
-    dynamixel_workbench_msgs::JointCommand joint_command;
+    // dynamixel_workbench_msgs::JointCommand joint_command;
     std::cout << "Motion" << std::endl;
     joint_command.request.id = id;
     joint_command.request.goal_position = deg;
@@ -121,6 +129,9 @@ int main(int argc, char **argv){
 
     position_object.Home();
 
-    ros::spin();
+    ros::Rate r(100);
+    while(ros::ok){
+        ros::spinOnce();
+    }
 }
 

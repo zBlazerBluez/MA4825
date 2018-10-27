@@ -130,7 +130,7 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-## Declare a C++ library
+# # Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/my_dynamixel_workbench_tutorial.cpp
 # )
@@ -208,6 +208,6 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
-add_executable(position src/position.cpp)
-target_link_libraries(position ${catkin_LIBRARIES})
-add_dependencies(position beginner_tutorials_generate_messages_cpp)
+add_executable(khang src/position.cpp)
+target_link_libraries(khang ${catkin_LIBRARIES})
+add_dependencies(khang beginner_tutorials_generate_messages_cpp)
