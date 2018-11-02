@@ -80,17 +80,19 @@ void PositionControl::initPublisher()
 {
   dynamixel_state_list_pub_ = node_handle_.advertise<dynamixel_workbench_msgs::DynamixelStateList>("dynamixel_state", 10);
   joint_states_pub_ = node_handle_.advertise<sensor_msgs::JointState>("joint_states", 10);
+  dynamixel_move_pub_ = node_handle_.advertise<dynamixel_workbench_msgs::MovingCommand>("move_command", 1000);
 }
 
 void PositionControl::initSubscriber()
 {
   joint_command_sub_ = node_handle_.subscribe("goal_dynamixel_position", 10, &PositionControl::goalJointPositionCallback, this);
+  move_command_sub_ = node_handle_.subscribe("move_command", 10, &PositionControl::jointCommandMsgCallback, this);
 }
 
 void PositionControl::initServer()
 {
   input_2_val_server = node_handle_.advertiseService("input_2_val", &PositionControl::input2ValCB, this);
-  joint_command_server_ = node_handle_.advertiseService("joint_command", &PositionControl::jointCommandMsgCallback, this);
+  //joint_command_server_ = node_handle_.advertiseService("joint_command", &PositionControl::jointCommandMsgCallback, this);
 }
 
 void PositionControl::dynamixelStatePublish()
@@ -148,34 +150,36 @@ void PositionControl::controlLoop()
   jointStatePublish();
 }
 
-bool PositionControl::jointCommandMsgCallback(dynamixel_workbench_msgs::JointCommand::Request &req,
-                                              dynamixel_workbench_msgs::JointCommand::Response &res)
+void PositionControl::jointCommandMsgCallback(const dynamixel_workbench_msgs::MovingCommand& req)
+//dynamixel_workbench_msgs::JointCommand::Request &req,
+//dynamixel_workbench_msgs::JointCommand::Response &res)
 {
   int32_t goal_position = 0;
   int32_t present_position = 0;
   int32_t goal_speed = 0;
   int32_t present_speed = 0;
 
-  if (req.unit == "rad")
-  {
-    goal_position = dxl_wb_->convertRadian2Value(req.id, req.goal_position);
-  }
-  else if (req.unit == "raw")
-  {
-    goal_position = req.goal_position;
-  }
-  else
-  {
-    goal_position = req.goal_position;
-  }
-
+  goal_position = req.goal_position;
   goal_speed = req.speed;
 
   bool ret_position = dxl_wb_->goalPosition(req.id, goal_position);
   bool ret_speed = dxl_wb_->goalSpeed(req.id, goal_speed);
 
-  res.position_result = ret_position;
-  res.speed_result = ret_speed;
+  //res.position_result = ret_position;
+  //res.speed_result = ret_speed;
+
+      /*if (req.unit == "rad")
+      {
+        goal_position = dxl_wb_->convertRadian2Value(req.id[i], req.goal_position[i]);
+      }
+      else if (req.unit == "raw")
+      {
+        goal_position = req.goal_position[i];
+      }
+      else
+      {
+        goal_position = req.goal_position[i];
+      }*/
 }
 
 void PositionControl::goalJointPositionCallback(const sensor_msgs::JointState::ConstPtr &msg)

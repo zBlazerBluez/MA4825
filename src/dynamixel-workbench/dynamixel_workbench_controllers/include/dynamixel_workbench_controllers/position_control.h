@@ -28,6 +28,7 @@
 #include <dynamixel_workbench_toolbox/dynamixel_workbench.h>
 #include <dynamixel_workbench_msgs/DynamixelStateList.h>
 #include <dynamixel_workbench_msgs/JointCommand.h>
+#include <dynamixel_workbench_msgs/MovingCommand.h>
 #include <dynamixel_workbench_msgs/Input2Val.h>
 
 class PositionControl
@@ -41,9 +42,11 @@ class PositionControl
   // ROS Topic Publisher
   ros::Publisher dynamixel_state_list_pub_;
   ros::Publisher joint_states_pub_;
+  ros::Publisher dynamixel_move_pub_;
 
   // ROS Topic Subscriber
   ros::Subscriber joint_command_sub_;
+  ros::Subscriber move_command_sub_;
 
   // ROS Service Server
   ros::ServiceServer input_2_val_server;
@@ -70,8 +73,8 @@ class PositionControl
   void jointStatePublish();
 
   void initServer();
-  bool jointCommandMsgCallback(dynamixel_workbench_msgs::JointCommand::Request &req,
-                               dynamixel_workbench_msgs::JointCommand::Response &res);
+  void jointCommandMsgCallback(const dynamixel_workbench_msgs::MovingCommand& req);/*(dynamixel_workbench_msgs::JointCommand::Request &req,
+                               dynamixel_workbench_msgs::JointCommand::Response &res);*/
   void goalJointPositionCallback(const sensor_msgs::JointState::ConstPtr &msg);
   bool input2ValCB(dynamixel_workbench_msgs::Input2Val::Request &req,
                  dynamixel_workbench_msgs::Input2Val::Response &res);

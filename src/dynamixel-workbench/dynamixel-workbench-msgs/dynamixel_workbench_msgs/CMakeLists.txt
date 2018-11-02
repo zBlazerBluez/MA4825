@@ -39,6 +39,7 @@ add_message_files(
   DynamixelStateList.msg
   DynamixelInfo.msg
   DynamixelLoadInfo.msg
+  MovingCommand.msg
 )
 
 add_service_files(
